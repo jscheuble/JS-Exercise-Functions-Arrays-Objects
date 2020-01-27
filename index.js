@@ -196,10 +196,6 @@ function getCarInfoById(inventory, num) {
   //   }
   // }
   // return `This is a ${make} ${model}`;
-
-  // for (const num in inventory) {
-  //   return 
-//   }
 }
 
 /**
@@ -231,11 +227,11 @@ function sortCarInventory(inventory) {
  * getModelYears returns an array containing all the 'car_year's in the inventory.
 */
 function getModelYears(inventory) {
-  var years = [];
+  const years = [];
   for (let i = 0; i < inventory.length; ++i) {
     years.push(inventory[i].car_year);
-    return years;
   }
+  return years;
 }
 
 /**
@@ -253,7 +249,7 @@ function getModelYears(inventory) {
 function getOlderCars(inventory, year) {
   var old = [];
   for (let i = 0; i < inventory.length; i++) {
-    if (inventory.car_year < year) {
+    if (inventory[i].car_year <= year) {
       old.push(inventory[i]);
     }
   }
@@ -271,8 +267,14 @@ function getOlderCars(inventory, year) {
  * made by either `Audi` or `Mercedes-Benz` or `Volkswagen` or `BMW`,
  * in the same order as they appear in the original inventory.
 */
-function getGermanCars(/* code here */) {
-  /* code here */
+function getGermanCars(inventory) {
+  // var german = [];
+  // for (let i = 0; i < inventory.length; i++) {
+  //   if (inventory[i].car_make === 'Audi' || 'Volkswagen' || 'BMW') {
+  //     german.push(inventory[i].car_model);
+  //   }
+  //   return german;
+  // }
 }
 
 /**
@@ -293,9 +295,15 @@ function getGermanCars(/* code here */) {
  *   return num * 2
  * }
 */
-const sum = null; // code here!
-const addFive = null; // code here!
-const argTimesTwo = null; // code here!
+const sum = (a, b) => {
+  return a + b;
+}; 
+const addFive = (num) => {
+  return num + 5;
+}; 
+const argTimesTwo = (num) => {
+  return num * 2;
+}; 
 
 /**
  * ### Challenge `carMaker`
