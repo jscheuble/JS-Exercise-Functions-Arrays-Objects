@@ -39,10 +39,15 @@ function addNumbers(num1, num2) {
  *   email: "leia@leia.com",
  * }
 */
-function makePersonObject(/* code here */) {
-  /* code here */
+function makePersonObject(id, name, email) {
+  var user = {
+    id: id,
+    name: name,
+    email: email,
+  }
+  return user;
 }
-
+const leia = makePersonObject(5, 'Leia', 'leia@leia.com');
 /**
  * ### Challenge `getName`
  * 
