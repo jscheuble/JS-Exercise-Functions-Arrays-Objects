@@ -61,8 +61,9 @@ const leia = makePersonObject(5, 'Leia', 'leia@leia.com');
  * passing { id: 1, name: 'Leia', email: 'leia@leia.com` } as the argument,
  * the returned value should look like `Hello, my name is Leia`.
 */
-function getName(/* code here */) {
-  /* code here */
+function getName(object) {
+  let name = object.name;
+  return 'Hello, my name is ' + name;
 }
 
 /**
