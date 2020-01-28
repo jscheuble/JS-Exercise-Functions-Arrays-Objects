@@ -188,14 +188,14 @@ function getLastCarInfo(inventory) {
  * it will return `This is a Lincoln Navigator`.
 */
 function getCarInfoById(inventory, num) {
-  // for (let i = 0; i <= inventory.length; i++) {
-  //   if (inventory.id === num) {
-  //     var car = inventory[i];
-  //     var make = car.car_make;
-  //     var model = car.car_model;
-  //   }
-  // }
-  // return `This is a ${make} ${model}`;
+  for (let i = 0; i < inventory.length; i++) {
+    if (inventory[i].id === num) {
+      var car = inventory[i];
+      var make = car.car_make;
+      var model = car.car_model;
+    }
+  }
+  return `This is a ${make} ${model}`;
 }
 
 /**
