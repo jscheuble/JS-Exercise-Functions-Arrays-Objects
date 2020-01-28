@@ -321,8 +321,9 @@ const argTimesTwo = (num) => {
 function carMaker(num) {
   const obj = {
     odometer: num,
-    drive: function(distance) {
-      return distance + num;
+    drive: function(miles) {
+      obj.odometer += miles;
+      return obj.odometer;
     }
   }
   return obj;
