@@ -268,13 +268,13 @@ function getOlderCars(inventory, year) {
  * in the same order as they appear in the original inventory.
 */
 function getGermanCars(inventory) {
-  // var german = [];
-  // for (let i = 0; i < inventory.length; i++) {
-  //   if (inventory[i].car_make === 'Audi' || 'Volkswagen' || 'BMW') {
-  //     german.push(inventory[i].car_model);
-  //   }
-  //   return german;
-  // }
+  var german = [];
+  for (let i = 0; i < inventory.length; i++) {
+    if (inventory[i].car_make === 'Audi' || inventory[i].car_make === 'Volkswagen' || inventory[i].car_make === 'BMW' || inventory[i].car_make === 'Mercedes-Benz') {
+      german.push(inventory[i]);
+    } 
+  }
+  return german;
 }
 
 /**
